@@ -6,9 +6,9 @@ public class PersonException extends Exception {
 	public Person getPerson() {
 		return Person;
 	}
-	
+	//Create custom exception
 	public PersonException(Person Person) {
-		super("\n" + "Invalid Input" + "\n");
+		super("\n" + "Invalid Input: Please provide correct input" + "\n");
 		this.Person = Person;
 	}
 }

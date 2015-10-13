@@ -22,7 +22,7 @@ public class Staff_Test {
 	@After
 	public void tearDown() throws Exception {
 	}
-
+	
 	@Test
 	public void testAverageSalary() {
 		ArrayList<Staff> myList = new ArrayList<Staff>();

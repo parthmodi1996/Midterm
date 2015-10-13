@@ -4,7 +4,8 @@ import java.util.UUID;
 
 public class Enrollment {
 	Section instOfSection = new Section();
-	private UUID StudentID;
+	Student instOfStudent = new Student();
+	private UUID StudentID = instOfStudent.getStudentID();
 	private UUID EnrollmentID;
 	private UUID SectionID = instOfSection.getSectionID();
 	public double Grade;
@@ -16,7 +17,7 @@ public class Enrollment {
 	public void setSectionID(UUID sectionID) {
 		SectionID = sectionID;
 	}
-
+	
 	public UUID getStudentID() {
 		return StudentID;
 	}
@@ -44,10 +45,17 @@ public class Enrollment {
 	/**
 	 * No-arg Constructor for Enrollment
 	 */
-	
+	private Enrollment() {
+		
+	}
+	/**
+	 * 
+	 * 2-arg constructor
+	 * 
+	 */
 	public Enrollment(UUID StudentID, UUID SectionID) {
-		this.StudentID = getStudentID();
-		this.SectionID = getSectionID();
+		this.StudentID = StudentID;
+		this.SectionID = SectionID;
 		UUID EnrollmentID = UUID.randomUUID();
 		setEnrollmentID(EnrollmentID);
 	}
